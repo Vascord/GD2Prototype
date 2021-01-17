@@ -124,7 +124,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: 
-  hp: 100
+  ferro: {fileID: 0}
+  copper: {fileID: 0}
+  silicone: {fileID: 0}
+  hp: 150
   health: {fileID: 0}
 --- !u!114 &4484270727541570652
 MonoBehaviour:

@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretAntiAereal : MonoBehaviour
 {
     public Transform target;
+    private float timer = 0f;
 
     // Update is called once per frame
     void Update()
@@ -37,7 +38,11 @@ public class TurretAntiAereal : MonoBehaviour
             return;
         }
 
-        HP hp = target.GetComponent<HP>();
-        hp.DealDamage(20);
+        if(Time.time - timer > 0.2f)
+        {
+            HP hp = target.GetComponent<HP>();
+            hp.DealDamage(25);
+            timer = Time.time;
+        }
     }
 }

@@ -89,46 +89,46 @@ public class RoboBuild : MonoBehaviour
             if(target.GetComponent<TurretAntiAereal>())
             {
                 timer = Time.time;
-                if(hp.hp < 100 && inventorys.copper > 0)
+                if(hp.hp < 100 && inventorys.silicone > 0)
                 {
-                    hp.YesHealDamage(15);
-                    inventorys.GetRessource('c');
+                    hp.YesHealDamage(50);
+                    inventorys.GetRessource('s');
                 }
             }
             else if(target.GetComponent<TurretPlasma>())
             {
                 timer = Time.time;
-                if(hp.hp < 100 && inventorys.iron > 0)
+                if(hp.hp < 100 && inventorys.copper > 0)
                 {
-                    hp.YesHealDamage(15);
-                    inventorys.GetRessource('i');
+                    hp.YesHealDamage(50);
+                    inventorys.GetRessource('c');
                 }
             }
             else if(target.GetComponent<TurretShotgun>())
             {
                 timer = Time.time;
-                if(hp.hp < 100 && inventorys.iron > 0)
+                if(hp.hp < 100 && inventorys.silicone > 0)
                 {
-                    hp.YesHealDamage(15);
-                    inventorys.GetRessource('i');
+                    hp.YesHealDamage(50);
+                    inventorys.GetRessource('s');
                 }
             }
             else if(target.GetComponent<RoboBuild>())
             {
                 timer = Time.time;
-                if(hp.hp < 100 && inventorys.copper > 0)
+                if(hp.hp < 100 && inventorys.iron > 0)
                 {
-                    hp.YesHealDamage(15);
-                    inventorys.GetRessource('c');
+                    hp.YesHealDamage(50);
+                    inventorys.GetRessource('i');
                 }
             }
             else if(target.GetComponent<GrabRobo>())
             {
                 timer = Time.time;
-                if(hp.hp < 100 && inventorys.silicone > 0)
+                if(hp.hp < 100 && inventorys.iron > 0)
                 {
-                    hp.YesHealDamage(15);
-                    inventorys.GetRessource('s');
+                    hp.YesHealDamage(50);
+                    inventorys.GetRessource('i');
                 }
             }
         }

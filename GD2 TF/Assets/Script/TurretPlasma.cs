@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurretPlasma : MonoBehaviour
 {
     public Transform target;
+    private float timer = 0f;
 
     // Update is called once per frame
     void Update()
@@ -54,7 +55,11 @@ public class TurretPlasma : MonoBehaviour
             return;
         }
 
-        HP hp = target.GetComponent<HP>();
-        hp.DealDamage(10);
+        if(Time.time - timer > 0.3f)
+        {
+            HP hp = target.GetComponent<HP>();
+            hp.DealDamage(20);
+            timer = Time.time;
+        }
     }
 }

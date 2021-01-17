@@ -129,7 +129,7 @@ MonoBehaviour:
   ferro: {fileID: 5992528259687201517, guid: 2b542a06b232f9443a7359dd8abfa71b, type: 3}
   copper: {fileID: 3164638054284839847, guid: 1e40910e4729da643ae27b93cb0d7406, type: 3}
   silicone: {fileID: 3582108868443047716, guid: ff8f2fefbdd59d3409947656e8e2fd4d, type: 3}
-  hp: 100
+  hp: 150
   health: {fileID: 0}
 --- !u!114 &4953333589711744163
 MonoBehaviour:
@@ -147,7 +147,7 @@ MonoBehaviour:
   damageMask:
     serializedVersion: 2
     m_Bits: 22784
-  damage: 10
+  damage: 5
 --- !u!114 &4953333589711744156
 MonoBehaviour:
   m_ObjectHideFlags: 0

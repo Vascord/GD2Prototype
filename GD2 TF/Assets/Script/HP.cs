@@ -24,7 +24,7 @@ public class HP : MonoBehaviour
         }
         set
         {
-            if (value) timer = 0.5f;
+            if (value) timer = 0.1f;
             else timer = 0;
         }
     }
@@ -68,16 +68,39 @@ public class HP : MonoBehaviour
 
         if ((hp <= 0) && (gameObject.tag == "EnemyGround" || gameObject.tag == "EnemyFly"))
         {
-            int loot = Random.Range(1,5);
+            int loot = Random.Range(1,14);
             switch(loot)
             {
                 case 2:
                     Instantiate(ferro, transform.position, defaultQ);
                     break;
+                case 5:
+                    Instantiate(ferro, transform.position, defaultQ);
+                    break;
+                case 6:
+                    Instantiate(copper, transform.position, defaultQ);
+                    break;
                 case 3:
                     Instantiate(copper, transform.position, defaultQ);
                     break;
                 case 4:
+                    Instantiate(silicone, transform.position, defaultQ);
+                    break;
+                case 7:
+                    Instantiate(ferro, transform.position, defaultQ);
+                    Instantiate(ferro, transform.position, defaultQ);
+                    break;
+                case 8:
+                    Instantiate(copper, transform.position, defaultQ);
+                    Instantiate(silicone, transform.position, defaultQ);
+                    break;
+                case 9:
+                    Instantiate(silicone, transform.position, defaultQ);
+                    Instantiate(ferro, transform.position, defaultQ);
+                    break;
+                case 10:
+                    Instantiate(silicone, transform.position, defaultQ);
+                    Instantiate(copper, transform.position, defaultQ);
                     Instantiate(silicone, transform.position, defaultQ);
                     break;
                 default:

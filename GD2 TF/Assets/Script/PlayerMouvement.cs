@@ -47,9 +47,8 @@ public class PlayerMouvement : MonoBehaviour
 
         if (horizontal != 0 || vertical != 0)
         {
-            if(Input.GetButtonDown("Dash") && cooldown > 3f)
+            if(Input.GetButtonDown("Dash") && cooldown > 1.5f)
             {
-                Debug.Log("oof");
                 dashTime = Time.time;
                 runSpeed *= 1.5f;
             }

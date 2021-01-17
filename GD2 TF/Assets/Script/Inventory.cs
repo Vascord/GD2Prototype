@@ -32,8 +32,6 @@ public class Inventory : MonoBehaviour
         resourceIron.text = iron.ToString();
         resourceCopper.text = copper.ToString();
         resourceSilicone.text = silicone.ToString();
-        resourceCPU.text = cpu.ToString();
-        resourceFrag.text = frag.ToString();
     }
 
     public void AddRessource(char ressource)
@@ -48,12 +46,6 @@ public class Inventory : MonoBehaviour
                 break;
             case 's':
                 silicone++;
-                break;
-            case 'p':
-                cpu++;
-                break;
-            case 'f':
-                frag++;
                 break;
         }
     }

@@ -42,7 +42,7 @@ public class Spawn : MonoBehaviour
 
         if(totalenemies < 10)
         {
-            if(Time.time - timer > 5f)
+            if(Time.time - timer > 10f)
             {
                 timer = Time.time;
                 int random = Random.Range(0,2);

@@ -54,10 +54,11 @@ public class CreateTurret : MonoBehaviour
     {
         if(Input.GetButtonDown("Turret1"))
         {
-            if(ressources.iron >= 2 && ressources.copper >= 1)
+            if(ressources.iron >= 1 && ressources.copper >= 1 && ressources.silicone >= 1)
             {
-                ressources.iron -= 2;
+                ressources.iron -= 1;
                 ressources.copper -= 1;
+                ressources.silicone -= 1;
                 Instantiate(plasma, gameObject.transform.position, defaultQ);
                 gameObject.GetComponent<PlayerMouvement>().enabled = true;
                 turretUI = false;
@@ -65,10 +66,10 @@ public class CreateTurret : MonoBehaviour
         }
         else if(Input.GetButtonDown("Turret2"))
         {
-            if(ressources.iron >= 6 && ressources.silicone >= 2)
+            if(ressources.iron >= 4 && ressources.silicone >= 3)
             {
-                ressources.iron -= 6;
-                ressources.silicone -= 2;
+                ressources.iron -= 4;
+                ressources.silicone -= 3;
                 Instantiate(shotgun, gameObject.transform.position, defaultQ);
                 gameObject.GetComponent<PlayerMouvement>().enabled = true;
                 turretUI = false;
@@ -76,10 +77,10 @@ public class CreateTurret : MonoBehaviour
         }
         else if(Input.GetButtonDown("Turret3"))
         {
-            if(ressources.iron >= 3 && ressources.copper >= 5)
+            if(ressources.iron >= 5 && ressources.copper >= 3)
             {
-                ressources.iron -= 3;
-                ressources.copper -= 5;
+                ressources.iron -= 5;
+                ressources.copper -= 3;
                 Instantiate(aerial, gameObject.transform.position, defaultQ);
                 gameObject.GetComponent<PlayerMouvement>().enabled = true;
                 turretUI = false;
@@ -87,11 +88,11 @@ public class CreateTurret : MonoBehaviour
         }
         else if(Input.GetButtonDown("Turret4"))
         {
-            if(ressources.iron >= 1 && ressources.copper >= 1 && ressources.silicone >= 3)
+            if(ressources.iron >= 1 && ressources.copper >= 2 && ressources.silicone >= 2)
             {
                 ressources.iron -= 1;
-                ressources.copper -= 1;
-                ressources.silicone -= 3;
+                ressources.copper -= 2;
+                ressources.silicone -= 2;
                 Instantiate(grab, gameObject.transform.position, defaultQ);
                 gameObject.GetComponent<PlayerMouvement>().enabled = true;
                 turretUI = false;
